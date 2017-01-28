@@ -1,0 +1,264 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_single_travel">
+
+    <com.offersbull.view.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/parallax_image_height"
+                android:scaleType="fitXY"
+                android:background="@color/divider"
+                />
+
+            <LinearLayout
+                android:id="@+id/linear_containt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+               <LinearLayout
+                   android:id="@+id/linear_header"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:background="#fff"
+                   android:padding="15dp">
+
+                   <TextView
+                       android:id="@+id/tvPost_title"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textColor="#000"
+                       android:textStyle="bold"
+                       android:textSize="14dp"/>
+
+                   <TextView
+                       android:id="@+id/tvCity"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/md_blue_grey_600"
+                       android:textSize="12dp"/>
+
+                   <TextView
+                       android:id="@+id/tvPost_owner"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/md_blue_grey_600"
+                       android:textSize="12dp"/>
+                   <TextView
+                       android:id="@+id/tv_date"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/md_blue_grey_600"
+                       android:textSize="12dp"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/linear_detail"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:background="@color/md_grey_200">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:background="@color/divider"/>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:paddingTop="10dp"
+                           android:paddingBottom="10dp">
+                           <TextView
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:textColor="#000"
+                               android:layout_weight="1"
+                               android:text="Price"
+                               android:paddingLeft="10dp"/>
+                           <TextView
+                               android:id="@+id/tv_price"
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:textColor="#000"
+                               android:layout_weight="1"
+                               android:paddingRight="10dp"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:background="@color/divider"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:paddingTop="10dp"
+                           android:paddingBottom="10dp">
+                           <TextView
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:textColor="#000"
+                               android:layout_weight="1"
+                               android:text="Location"
+                               android:paddingLeft="10dp"/>
+                           <TextView
+                               android:id="@+id/tv_location"
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:textColor="#000"
+                               android:layout_weight="1"
+                               android:paddingRight="10dp"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:background="@color/divider"/>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:paddingTop="10dp"
+                           android:paddingBottom="10dp">
+                           <TextView
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:textColor="#000"
+                               android:layout_weight="1"
+                               android:text="Address"
+                               android:paddingLeft="10dp"/>
+                           <TextView
+                               android:id="@+id/tv_address"
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:textColor="#000"
+                               android:layout_weight="1"
+                               android:paddingRight="10dp"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:background="@color/divider"/>
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/linear_discription"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:padding="10dp"
+                   android:background="#fff">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Description"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+                   <com.offersbull.view.ExpandableTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/tv_discrip"
+                       android:textColor="@color/md_black_1000"
+                       android:textSize="14sp"
+                       />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:background="@color/md_grey_200"
+                   android:padding="10dp">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Similar travelling"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+                   <android.support.v7.widget.RecyclerView
+                       android:id="@+id/recycler_view"
+                       android:scrollbars="horizontal"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_marginTop="10dp"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:background="#fff"></LinearLayout>
+
+           </LinearLayout>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btn_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:background="@color/colorPrimary"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    </com.offersbull.view.ObservableScrollView>
+
+    <include layout="@layout/gradient_header" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/MyAppTheme" />
+</FrameLayout>

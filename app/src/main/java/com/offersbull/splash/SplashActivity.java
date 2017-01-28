@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.offersbull.MainActivity;
 import com.offersbull.R;
 import com.offersbull.appintro.IntroActivity;
 
@@ -46,7 +47,7 @@ public class SplashActivity extends AppCompatActivity implements ISplashView{
     @Override
     public void moveToMainView() {
 
-        startActivity(new Intent(this,IntroActivity.class));
+        startActivity(new Intent(this,MainActivity.class));
         finish();
     }
 }

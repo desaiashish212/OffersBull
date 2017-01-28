@@ -27,8 +27,53 @@
         <activity
             android:name=".main.MainPageActivity"
             android:theme="@style/FullScreen" />
-        <activity android:name=".login.LoginActivity"
-            android:theme="@style/FullScreen" ></activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".activity.RealEstateActivity"
+            android:label="Real estate" />
+        <activity android:name=".activity.TutionActivity"
+            android:label="Tuition"/>
+        <activity android:name=".activity.HotelRestroActivity"
+            android:label="Hotels and Restaurents"/>
+        <activity android:name=".activity.TravellingActivity"
+            android:label="Travelling"/>
+        <activity android:name=".activity.AutomobileActivity"
+            android:label="Automobile"/>
+        <activity android:name=".activity.OtherActivity"
+            android:label="Other"/>
+        <activity android:name=".activity.SingleRealEstateActivity"
+            android:parentActivityName=".activity.RealEstateActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name=".activity.SingleTutionActivity"
+            android:parentActivityName=".activity.TutionActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name=".activity.SingleHotelActivity"
+            android:parentActivityName=".activity.HotelRestroActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name=".activity.SingleTravellingActivity"
+            android:parentActivityName=".activity.TravellingActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name=".activity.SingleOtherActivity"
+            android:parentActivityName=".activity.OtherActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name=".activity.SingleAutomobileActivity"
+            android:parentActivityName=".activity.AutomobileActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name=".activity.OfferActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/MyAppTheme"
+            ></activity>
+
+        <receiver
+            android:name=".utils.NetworkStateReceiver"
+            android:label="NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

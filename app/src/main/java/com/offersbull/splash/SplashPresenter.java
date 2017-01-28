@@ -38,6 +38,6 @@ public class SplashPresenter implements IConnectionStatus {
                     splashView.showNoInetErrorMsg();
                 }else splashView.moveToMainView();
             }
-        },5000);
+        },3000);
     }
 }
